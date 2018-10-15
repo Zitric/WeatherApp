@@ -1,0 +1,44 @@
+<header class="row justify-content-center">
+
+  <h1  *ngIf="!city" > Welcome to weather test app </h1>
+  <h1  *ngIf="city" > The weather in {{ city }}</h1>
+
+</header>
+
+<section class="my-4">
+
+  <form (ngSubmit)="getDataWeather( name.value )">
+    <aside class="form-group row">
+
+
+      <label class="col-4 col-form-label">
+        <strong class="float-right">Introduce the name of the city</strong>
+      </label>
+
+      <div class="col-4">
+        <input class="form-control"
+               type="text"
+               placeholder="Name of the city"
+               name="name"
+               ngModel
+               #name>
+      </div>
+
+      <div class="input-group col-4">
+        <button type="submit" class="btn btn-outline-success">
+          Search
+        </button>
+      </div>
+
+    </aside>
+  </form>
+
+
+  <aside *ngIf="city" class="mt-5 mr-5">
+    <div class="card-deck float-right">
+      <app-day class="mx-auto" [dayArray]="day" *ngFor="let day of arrayOfDays"></app-day>
+    </div>
+  </aside>
+
+</section>
+

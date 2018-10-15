@@ -1,0 +1,22 @@
+
+
+<div class="card border-dark mb-3 text-center">
+
+  <div class="card-header border-dark">
+    <h5> Day {{ dayArray[0].dt_txt.split(' ')[0].slice( 5 ) }} </h5>
+  </div>
+
+  <div *ngFor="let threeHours of dayArray">
+
+    <div class="card-header bg-transparent">
+      <h6> Time {{ threeHours.dt_txt.split(' ')[1].slice( 0, -3 ) }} </h6>
+    </div>
+
+    <div class="card-header bg-transparent text-dark border-dark">
+      <h6 class="card-title"> {{ threeHours.weather[0].description }}</h6>
+      <p class="card-text text-danger"> {{ threeHours.main.temp_max }} </p>
+      <p class="card-text text-info"> {{ threeHours.main.temp_min }} </p>
+    </div>
+
+  </div>
+</div>
