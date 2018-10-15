@@ -34,9 +34,9 @@
   </form>
 
 
-  <aside *ngIf="city" class="mt-5 mr-5">
-    <div class="card-deck float-right">
-      <app-day class="mx-auto" [dayArray]="day" *ngFor="let day of arrayOfDays"></app-day>
+  <aside *ngIf="city" class="container mt-5">
+    <div class="row">
+      <app-day class="col" [dayArray]="day" *ngFor="let day of arrayOfDays"></app-day>
     </div>
   </aside>
 
