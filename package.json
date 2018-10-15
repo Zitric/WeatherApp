@@ -22,7 +22,10 @@
     "@angular/platform-browser-dynamic": "^5.1.0",
     "@angular/router": "^5.1.0",
     "core-js": "^2.4.1",
+    "cryptiles": "^4.1.2",
+    "hoek": "^5.0.4",
     "rxjs": "^5.5.6",
+    "timespan": "^2.3.0",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
