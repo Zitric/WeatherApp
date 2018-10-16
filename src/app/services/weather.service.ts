@@ -14,7 +14,12 @@ export class WeatherService {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${ city }&units=metric&appid=${ this.apiId }`;
 
     return this.http.get( url )
-      .pipe( map( response => response['list'] ));
+      .pipe( map( ( response: any ) => {
+        console.log('Name of the city', response.city.name );
+        console.log('The array of data', response.list );
+        console.log('the whole data from open weather map', response );
+        return response['list'];
+      }));
   }
 
 }
